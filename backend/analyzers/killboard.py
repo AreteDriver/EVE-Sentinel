@@ -103,7 +103,10 @@ class KillboardAnalyzer(BaseAnalyzer):
             )
 
         # GREEN FLAG: Logi pilot (from ship preferences)
-        logi_ships = {"Guardian", "Oneiros", "Basilisk", "Scimitar", "Lif", "Ninazu", "Apostle", "Minokawa"}
+        logi_ships = {
+            "Guardian", "Oneiros", "Basilisk", "Scimitar",
+            "Lif", "Ninazu", "Apostle", "Minokawa"
+        }
         if any(ship in logi_ships for ship in kb.top_ships[:5]):
             flags.append(
                 RiskFlag(
@@ -111,7 +114,9 @@ class KillboardAnalyzer(BaseAnalyzer):
                     category=FlagCategory.KILLBOARD,
                     code=GreenFlags.LOGI_PILOT,
                     reason="Flies logistics ships",
-                    evidence={"logi_ships_in_top": [s for s in kb.top_ships[:5] if s in logi_ships]},
+                    evidence={
+                        "logi_ships_in_top": [s for s in kb.top_ships[:5] if s in logi_ships]
+                    },
                     confidence=0.8,
                 )
             )

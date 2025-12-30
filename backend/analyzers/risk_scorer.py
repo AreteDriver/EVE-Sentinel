@@ -9,8 +9,8 @@ from backend.models.flags import RiskFlag
 from backend.models.report import AnalysisReport, OverallRisk, ReportStatus
 
 from .base import BaseAnalyzer
-from .killboard import KillboardAnalyzer
 from .corp_history import CorpHistoryAnalyzer
+from .killboard import KillboardAnalyzer
 
 
 class RiskScorer:

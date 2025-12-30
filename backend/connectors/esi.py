@@ -112,7 +112,7 @@ class ESIClient:
         history_data = await self.get_character_corp_history(character_id)
 
         # NPC corps (starter corps, etc.)
-        NPC_CORPS = {
+        npc_corps = {
             1000002, 1000003, 1000006, 1000007, 1000008, 1000009,
             1000010, 1000011, 1000012, 1000013, 1000014, 1000015,
             1000016, 1000017, 1000018, 1000019, 1000020, 1000044,
@@ -161,7 +161,7 @@ class ESIClient:
                     start_date=start,
                     end_date=end,
                     duration_days=duration,
-                    is_npc=corp_id in NPC_CORPS,
+                    is_npc=corp_id in npc_corps,
                 )
             )
 

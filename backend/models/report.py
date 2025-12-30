@@ -7,7 +7,7 @@ from uuid import UUID, uuid4
 from pydantic import BaseModel, Field
 
 from .applicant import Applicant, Playstyle, SuspectedAlt
-from .flags import RiskFlag, FlagSeverity
+from .flags import FlagSeverity, RiskFlag
 
 
 class OverallRisk(str, Enum):

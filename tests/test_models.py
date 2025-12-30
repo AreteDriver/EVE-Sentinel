@@ -1,8 +1,7 @@
 """Test model definitions."""
 
-import pytest
 
-from backend.models.flags import FlagSeverity, RiskFlag, FlagCategory, RedFlags
+from backend.models.flags import FlagCategory, FlagSeverity, RedFlags, RiskFlag
 from backend.models.report import AnalysisReport, OverallRisk
 
 
